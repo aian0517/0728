@@ -1,0 +1,357 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+header .row:nth-child(1) {
+    padding-top: 100px;
+}
+.navbar{
+    top: 0;
+    transition: all 0.3s ease-in-out;
+}
+.nav-scroll{
+    top: -100px;
+}
+.run_text {
+    height: 100%;
+    animation: runtext 2s alternate infinite steps(15);
+    background-color: #fff;
+    border-right: 1px solid #000;
+    z-index: 99;
+}
+.run_text span {
+    width: 500px;
+    word-wrap: normal;
+    display: block;
+}
+
+@keyframes runtext {
+    0% {
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.cover-runimg-box{
+    z-index: -1;
+    animation: cover-runimg 10s linear infinite;
+}
+.cover-runimg{
+    list-style-type: none;
+    padding: 0;
+
+}.cover-runimg li {
+    margin-right: 50px;
+}
+.cover-runimg img {
+    height: 80px;
+}
+
+@keyframes cover-runimg{
+    to{
+        transform: translateX(-105%);
+    }
+}
+
+
+.fold-title{
+    cursor: pointer;
+    border-bottom: 1px solid #bebcbc;
+    color: #8b8a8a;
+}
+.fold-title.active{
+    color: #000000;
+}
+.fold-img{
+    width: 20px;
+    object-fit: contain;
+    margin-left: auto;
+}
+.fold-text{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+.fold-text.active{
+    height:150px;
+    padding: 30px 0;
+    transition: height 0.5s;
+}
+.fold-link{
+    color: #000;
+}
+.fold-wire{
+    width: 0;
+    height: 4px;
+    background-color: #a5a1a1cd;
+    border-radius: 10px;
+}
+.fold-wire.active{
+    animation: fold-wire 5s linear;
+}
+@keyframes fold-wire{
+    form{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+
+.body-3{
+    background: linear-gradient(195.95deg,#202326 2.7%,#191c1e 97.41%);
+    padding:200px 0;
+    position: relative;
+    overflow: hidden;
+}
+.body-3::after{
+    content: '';
+    position: absolute;
+    left: -50vw;
+    top: -70vw;
+    min-width: 2000px;
+    min-height: 2000px;
+    border-radius: 50%;
+    border: 3px dotted #c3c3c3;
+}
+.body-3::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:-75vw;
+    width: 2100px;
+    height: 2100px;
+    border-radius: 50%;
+    border: 3px dotted #c3c3c3;
+}
+.card-coll{
+    transform: scaleY(1);
+}
+
+.card1{
+    background-color: #222629;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 5px #737272;
+    max-height: 590px;
+    height: 100%;
+    z-index: 999;
+}
+
+.card-btn{
+    text-decoration: none;
+    width: 100%;
+    border-radius: 20px;
+}
+.card-ul{
+    list-style-image: url(/img/勾勾.png);
+    background-size: 10px 10px;
+}
+
+.body4-img{
+    width: 20%;
+}
+.body5-carousel{
+    min-height: 600px;
+    height: 100%;
+}
+
+.card-2{
+    min-width: 400px;
+    max-width: 500px;
+    min-height:250px;
+    max-height: 450px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid #f4f4f490;
+    box-shadow: 0 0 3px rgb(204, 203, 203);
+}
+.run-card{
+   animation: run-card 40s linear infinite; 
+    /* transform: translateX(-66%); */
+}
+.run-card:hover{
+    animation-play-state:paused;
+}
+@keyframes run-card {
+    100% {
+        transform: translateX(-66%);
+    }      
+}
+
+.last-container{
+    padding: 140px 0;
+    overflow: hidden;
+}
+.last-title{
+    position: relative;
+    color: #504747;
+}
+.last-title::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: #cfcfcf;
+}
+.last-title::before{
+    content: '';
+    position: absolute;
+    right:0;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: #cfcfcf;
+}
+
+.last-card{
+    aspect-ratio: 3/5;
+    background-color: #8ca2b1;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.last-card h2{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+
+.last-btn{
+    width: 0;
+    height: 40px;
+    padding:20px;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    border: none;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width .3s linear;
+}
+.last-card:hover .last-btn{
+    width: 160px;
+}
+.last-btn p{
+    display: none;
+    white-space: nowrap; 
+    margin-right: 10px !important;
+}
+.last-card:hover p{
+    display: flex;
+}
+.last-img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.robot-btn{
+    width: 60px;
+    height: 60px;
+    background-color: #5a5858;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s linear;
+    box-shadow: 0 0 8px #858585;
+    z-index: 999;
+}
+.robot-btn img{
+    width: 50%;
+}
+.robot-btn:hover{
+    transform: scale(1.1);
+}
+
+.robot{
+    width: 370px;
+    height: 530px;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0);
+    transition: all .2s linear;
+    transform-origin: bottom;
+}
+.robot.active{
+    transform: scale(1);
+    transform: translateY(-10px);
+}
+.robot-header,.robot-footer{
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+}
+.robot-header{
+    border-radius: 10px 10px 0 0;
+    background-color: #292a2d;
+}
+.robot-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f7f6f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.robot-body{
+    flex: 1;
+    padding: 10px 15px;
+    overflow-y: auto;
+}
+.robot-messages,.robot-messages2{
+    background-color: #d3e6f8;
+    margin-bottom: 10px;
+    border-radius: 0 10px 10px 10px;
+    padding:5px 10px;
+}
+.robot-messages2{
+    border-radius:  10px 0 10px 10px;
+    background-color: #646262;
+    color: #fff;
+    word-break: break-all;
+}
+.robot-footer{
+    border-radius: 0 0 10px 10px;
+    justify-content: space-between;
+}
+.robot-input{
+    border: none;
+    padding: 5px;
+    outline: none;
+    color: #676767;
+
+}
+.robot-input::placeholder{
+    color: rgb(123, 152, 182);
+}

@@ -1,0 +1,59 @@
+
+@media (max-width: 1080px){
+    .body-3::after,.body-3::before{
+        display: none;
+    }
+    .card1-v{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 20px;
+    }
+    .card1-v2{
+        transform: rotate(180deg);
+    }
+    .card1{
+        height: 150px;
+        transition: all .2s linear;
+    }
+    .card-coll{
+        display: none;
+    }
+    .card-coll-click{
+        display: block;
+    }
+    .body4-img{
+        width:100px ;
+        object-fit: cover;
+    }
+    .run-img{
+        /* display: flex; */
+        animation: run-img 10s linear infinite;
+    }
+    @keyframes run-img {
+        to{
+            transform: translateX(-137%);
+        }
+    }
+    .card1-click{
+        height: 590px;
+    }
+    .last-title::after{
+        display: none;
+    }
+    .last-title::before{
+        display: none;
+    }
+    .last-card{
+        min-height: 300px;
+        height: 100%;
+        margin-right: 20px;
+    }
+    .robot{
+        right: 23px;
+        bottom: 88px;
+        width: 350px;
+        height: 450px;    
+    }
+
+}
